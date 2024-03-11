@@ -34,7 +34,7 @@ func (pr *propertyReference) invalid() bool {
 func (pr *propertyReference) getValue() Value {
 	if pr.base == nil {
 		//panic(pr.runtime.panicReferenceError("'%s' is not defined", pr.name, pr.at))
-		return emptyValue
+		return nullValue
 	}
 	return pr.base.get(pr.name)
 }
